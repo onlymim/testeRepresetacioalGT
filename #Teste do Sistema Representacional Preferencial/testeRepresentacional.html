@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Teste Representacional</title>
+    <script type="text/javascript">
+
+        
+
+        function vcad() {
+            // Get all input fields by class name
+            var visualInputs = Array.from(document.getElementsByClassName('visual'));
+            var cinestesicoInputs = Array.from(document.getElementsByClassName('cinestesico'));
+            var auditivoInputs = Array.from(document.getElementsByClassName('auditivo'));
+            var digitalInputs = Array.from(document.getElementsByClassName('digital'));
+            
+            // Initialize variables to store the sum
+            var visualSum = 0;
+            var cinestesicoSum = 0;
+            var auditivoSum = 0;
+            var digitalSum = 0;
+
+            function verificaValores(inputsV, inputsC, inputsA, inputsD) {
+                let temDuplicatas = false;
+
+                for (let i = 0; i < inputsV.length; i++) {
+                    for (let j = 0; j < inputsC.length; j++) {
+                        for (let k = 0; k < inputsA.length; k++) {
+                            for (let m = 0; m < inputsD.length; m++) {
+                                if (inputsV[i].value === inputsC[j].value || 
+                                    inputsV[i].value === inputsA[k].value || 
+                                    inputsV[i].value === inputsD[m].value ||
+                                    inputsC[j].value === inputsA[k].value || 
+                                    inputsC[j].value === inputsD[m].value ||
+                                    inputsA[k].value === inputsD[m].value) {
+                                    temDuplicatas = true;
+                                    break;
+                                }
+                            }
+                            if (temDuplicatas) break;
+                        }
+                        if (temDuplicatas) break;
+                    }
+                    if (temDuplicatas) break;
+                }
+
+                if (temDuplicatas) {
+                    // Limpa os campos
+                    inputsV.forEach(input => input.value = '');
+                    inputsC.forEach(input => input.value = '');
+                    inputsA.forEach(input => input.value = '');
+                    inputsD.forEach(input => input.value = '');
+
+                    alert('Erro: não coloque o mesmo valor para campos diferentes na mesma questão.');
+                }
+            }
+
+            verificaValores(visualInputs, cinestesicoInputs, auditivoInputs, digitalInputs);
+
+            // Function to sum values from input fields
+            function sumInputs(inputs) {
+                var total = 0;
+                for (var i = 0; i < inputs.length; i++) {
+                    var value = parseInt(inputs[i].value) || 0;
+                    total += value;
+                }
+                return total;
+            }
+
+            // Calculate sums for each category
+            visualSum = sumInputs(visualInputs);
+            cinestesicoSum = sumInputs(cinestesicoInputs);
+            auditivoSum = sumInputs(auditivoInputs);
+            digitalSum = sumInputs(digitalInputs);
+
+            // Display results
+            document.getElementById('results').innerHTML = `
+                <h4>Resultados:</h4>
+                <p>Visual: ${visualSum}</p>
+                <p>Cinestésico: ${cinestesicoSum}</p>
+                <p>Auditivo: ${auditivoSum}</p>
+                <p>Digital: ${digitalSum}</p>
+
+                <p>A) Auditivo: nesse sistema, a pessoa utiliza os sentidos auditivos para processar informações. Isso inclui ouvir sons de modo interno, re-ouvir vozes e relembrar vozes de outras pessoas. Nesse caso, tudo aquilo que é ouvido é compreendido e absorvido. Portanto, com essa preferência, o indivíduo pode despertar  interesses por treinamentos, línguas, música, escrita etc. Dicas para acelerar o aprendizado: pratique ao ouvir músicas, podcasts e diálogos em inglês. Treine sua habilidade de compreensão auditiva.</p>
+
+<p>B) Visual: aqui é mais fácil 'sonhar acordado' e imaginar, pois o indivíduo utiliza as imagens internamente, visualiza e cria imagens mentais para melhor compreensão e desmistificação de informações. Com essa preferência, portanto, é possível desenvolver interesses por artes visuais, TV, moda, fotografia, desenho, filmes, decoração de ambientes etc.Dicas para acelerar o aprendizado: assista a filmes, séries e vídeos em inglês. Tente imaginar cenas e situações enquanto aprende vocabulário.</p>
+<p>C) Cinestésico: envolve sensações físicas como toque, equilíbrio e outras experiências sensoriais. Por isso, o indivíduo possui característica sensível e tende a demonstrar interesses por interações sociais, dança, esportes, ginástica etc. Dicas para acelerar o aprendizado: participe de atividades práticas como esportes, dança e interações sociais. Isso ajudará você a associar palavras e expressões a experiências físicas.</p>
+<p>D) Digital (ou Auditivo Digital): esse sistema envolve o uso de palavras e diálogo interno (dialogar consigo mesmo) para pensar. Esse indivíduo tende a ser mais lógico e racional, com interesses por atividades não tão específicas, mas que exigem processamento e reflexão.</p>
+<p>Dicas para acelerar o aprendizado: pratique a leitura, escreva diários ou faça anotações em inglês. Reflita sobre conceitos e ideias para desenvolver sua habilidade de raciocínio lógico.
+Lembre-se de que todos nós temos preferências diferentes, mas explorar esses sistemas representacionais pode enriquecer sua jornada de aprendizado. Experimente diferentes abordagens e descubra qual funciona melhor para você!</p>
+            `;
+        }
+    </script>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3"> 
+        <img src="imagens/GTlogo.png" width="108px" height="192px" alt="Logo">
+        <div>
+            <h1>Teste Representacional</h1>
+        </div>
+    </header>
+
+    <div class="container my-4">
+        <section> 
+            <form id="contactForm">
+            <input type="text" name="nome" placeholder="Seu nome completo" class=" form-control"><br><br>
+            <input type="tel" name="cel" placeholder="tel/cel" class="form-control" required><br><br>
+            <input type="email" name="email" placeholder="email@email.com" class=" form-control" required><br><br>
+            <input type="submit" value="enviar" class="btn btn-primary">
+            <input type="reset" value="limpar" class="btn btn-primary"><br><br>
+            
+            </form>
+
+            <script type="text/javascript">
+                 document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio normal do formulário
+
+            // Cria o link mailto com os dados do formulário
+            var form = event.target;
+            var name = form.nome.value;
+            var tel = form.cel.value;
+            var email = form.email.value;
+            var mailtoLink = 'mailto:administrativo@genialteachers.com' +
+                             '?subject=Formulário de Contato' +
+                             '&body=Nome: ' + encodeURIComponent(name) +
+                             '%0A' + 'Telefone/Celular: ' + encodeURIComponent(tel) +
+                             '%0A' + 'Email: ' + encodeURIComponent(email);
+
+            // Abre o link mailto em uma nova aba
+            window.open(mailtoLink, '_blank');
+        });
+            </script>
+
+        
+            <article class="mb-3">
+                <p> Para compreender o mundo, o ser humano utiliza os sentidos para coletar informações e experenciar diferentes situações do dia-a-dia. Quando nós pensamos, utilizamos os sentidos de maneira interna. Por isso, podemos pensar ao sentir algo (havendo sensações), ao falar (conversar consigo mesmo, havendo diálogo interno) e, também, ao visualizar imagens. Consequentemente, quando nós pensamos, re-apresentamos essas informações internamente.</p>
+                <p>Para aprender a se comunicar em inglês de forma eficaz, por exemplo, é importante entender os diferentes sistemas representacionais que usamos para processar informações. A Programação Neurolinguística (PNL) identifica esses sentidos em 04 (quatro) Sistemas Representacionais Preferenciais: o auditivo, o visual, o cinestésico e o digital. Todos esses sistemas são utilizados o tempo inteiro, porém, devido às preferências no sistema representacional de cada indivíduo, o ser humano tende a utilizar uns mais que outros sistemas. Após fazer o teste, saiba mais detalhes sobre cada sistema representacional preferencial. <br><br> </p>
+            </article>
+            <article>
+                <h2>Para cada uma das afirmativas abaixo, inclua a numeração em todos os quadrados de acordo com o sistema abaixo para indicar as suas preferências.</h2>
+                <br>
+                <h3>
+                    1 = A que te menos te descreve<br>
+                    2 = A próxima (a que descreve você só um pouco)<br>
+                    3 = A próxima que melhor descreve você<br>
+                    4 = A que melhor te descreve<br>
+                </h3>
+
+                <h5 style="color: red;"> **Lembre-se que para cada pergunta, é importante não repetir o mesmo número nos espaços a serem preenchidos </h5>
+
+            </article>
+
+            <br>
+
+            <article>
+                <form>
+                    <div class="mb-3">
+                        <h3>1 - As decisões importantes que eu tomo são baseadas...</h3>
+                        <input class="visual form-control" type="number" min="1" max="4"> em intuição. <br>
+                        <input class="cinestesico form-control" type="number" min="1" max="4"> no que me soa melhor (naquilo que eu ouço). <br>
+                        <input class="auditivo form-control" type="number" min="1" max="4"> no que parece melhor (naquilo que eu vejo). <br>
+                        <input class="digital form-control" type="number" min="1" max="4"> em um estudo preciso e minucioso do assunto.<br>
+                    </div>
+
+                    <div class="mb-3">
+                        <h3>2 - Durante uma discussão eu sou mais influenciado(a)...</h3>
+                        <input class="visual form-control" type="number" min="1" max="4"> pelo tom de voz de outra(s) pessoa(s). <br>
+                        <input class="cinestesico form-control" type="number" min="1" max="4"> se eu posso ou não ver o argumento do(s) outro(s).<br>
+                        <input class="auditivo form-control" type="number" min="1" max="4"> pela lógica do argumento de outra(s) pessoa(s).<br>
+                        <input class="digital form-control" type="number" min="1" max="4"> se eu me sintonizo ou não com os sentimentos reais do(s) outro(s).
+                        <br>
+                    </div>
+
+                    <div class="mb-3">
+                        <h3>3 - Eu comunico de maneira mais fácil sobre o que se passa comigo por meio...</h3>
+                        <input class="visual form-control" type="number" min="1" max="4"> de como eu me visto e aparento. <br>
+                        <input class="cinestesico form-control" type="number" min="1" max="4"> dos sentimentos que eu compartilho. <br>
+                        <input class="auditivo form-control" type="number" min="1" max="4"> das palavras que eu escolho. <br>
+                        <input class="digital form-control" type="number" min="1" max="4"> do tom da minha voz. <br>
+                    </div>
+
+                    <div class="mb-3">
+                        <h3>4 - Eu tenho bastante facilidade para...</h3>
+                        <input class="visual form-control" type="number" min="1" max="4"> encontrar o volume e a sintonia ideais em um sistema de som.<br>
+                        <input class="cinestesico form-control" type="number" min="1" max="4"> selecionar o ponto mais relevante relativo a um assunto interessante <br>
+                        <input class="auditivo form-control" type="number" min="1" max="4"> escolher os móveis mais confortáveis em um ambiente.<br>
+                        <input class="digital form-control" type="number" min="1" max="4"> escolher as combinações de cores mais ricas e atraentes.<br>
+                    </div>
+
+                    <div class="mb-3">
+                        <h3>5 - Eu me noto assim... (a frase abaixo que eu me identifico é...)</h3>
+                        <input class="visual form-control" type="number" min="1" max="4"> estou em sintonia com os sons do ambiente.<br>
+                        <input class="cinestesico form-control" type="number" min="1" max="4"> tenho muita capacidade de raciocinar com dados e fatos novos.<br>
+                        <input class="auditivo form-control" type="number" min="1" max="4"> sou bastante sensível à maneira como a roupa veste meu corpo.<br>
+                        <input class="digital form-control" type="number" min="1" max="4"> respondo fortemente à aparência e às cores de uma sala.<br>
+                    </div>
+
+                    <div>
+                        <input type="button" class="btn btn-primary" value="Calcular" onclick="vcad()">
+                    </div>
+                </form>
+            </article>
+        </section>
+
+        <div id="results" class="mt-4" style="background-color: #85c2ff; padding: 1em; padding-top:0px;"></div>
+    </div>
+</body>
+</html>

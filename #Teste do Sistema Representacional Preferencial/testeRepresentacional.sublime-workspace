@@ -1,0 +1,362 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"h",
+				"h1"
+			],
+			[
+				"tem",
+				"tempoMosca"
+			],
+			[
+				"s",
+				"script"
+			],
+			[
+				"opt",
+				"option"
+			],
+			[
+				"b",
+				"button"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"background-",
+				"background-image"
+			],
+			[
+				"f",
+				"floor"
+			],
+			[
+				"posi",
+				"posiçãoY"
+			],
+			[
+				"pos",
+				"posiçãoY"
+			],
+			[
+				"po",
+				"posiçãoX"
+			],
+			[
+				"al",
+				"altura"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"l",
+				"link"
+			],
+			[
+				"onre",
+				"onresize"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"met",
+				"meta"
+			],
+			[
+				"me",
+				"meta"
+			],
+			[
+				"text-c",
+				"text-decoration-color"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"onc",
+				"onclick"
+			],
+			[
+				"re",
+				"red"
+			],
+			[
+				"li",
+				"link"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
+				"o",
+				"objetos"
+			],
+			[
+				"ob",
+				"objetos"
+			],
+			[
+				"obje",
+				"objeto"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"oncl",
+				"onclick"
+			],
+			[
+				"v",
+				"valor"
+			],
+			[
+				"bo",
+				"border-color"
+			],
+			[
+				"onk",
+				"onkeyup"
+			],
+			[
+				"t",
+				"type"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"c",
+				"class"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/J/Meu Drive/testeRepresentacional/testeRepresentacional.html",
+		"/C/Users/cliente/Desktop/GameMataMosquito/fimDeJogo.html",
+		"/C/Users/cliente/Desktop/GameMataMosquito/vitoria.html",
+		"/C/Users/cliente/Desktop/GameMataMosquito/estilo.css",
+		"/C/Users/cliente/Desktop/GameMataMosquito/app.js",
+		"/C/Users/cliente/Desktop/GameMataMosquito/app.html",
+		"/C/Users/cliente/Desktop/GameMataMosquito/index.html",
+		"/C/Users/cliente/Desktop/Gabriel/faculdade/desafio/htmlfacul/tabela.html",
+		"/C/Users/cliente/Desktop/Gabriel/faculdade/desafio/Arrays/Array_for.html",
+		"/C/Users/cliente/Desktop/web-indentidade visual/js.js",
+		"/C/Users/cliente/Desktop/web-indentidade visual/index.html",
+		"/C/Users/cliente/Desktop/web-indentidade visual/css/estilo.css",
+		"/C/Users/cliente/Desktop/web-indentidade visual/img/Logo-Gabriel-2.0-Fundo-Transparente.png",
+		"/C/Users/cliente/Desktop/Gabriel/JavaScript/index.html",
+		"/C/Users/cliente/Desktop/Gabriel/JavaScript/code.js",
+		"/C/Users/cliente/Desktop/Gabriel/JavaScript/desafio2.js",
+		"/C/Users/cliente/Desktop/Gabriel/JavaScript/desafio.js",
+		"/C/Users/cliente/Desktop/Gabriel/JavaScript/ArrayChalenge.html",
+		"/C/Users/cliente/Desktop/Gabriel/JavaScript/atividade array",
+		"/C/Users/cliente/Desktop/Gabriel/JavaScript/Genial Teachers/index.html",
+		"/C/Users/cliente/Downloads/arquivos_da_aula/app1/index.html",
+		"/C/Users/cliente/Desktop/Gabriel/1c-arquivos-aula-museu-nacional-criando-topo/Museu Nacional/index.html",
+		"/C/Users/cliente/Desktop/Gabriel/1c-arquivos-aula-museu-nacional-criando-topo/Museu Nacional/css/estilo.css",
+		"/C/Users/cliente/App_camera/src/index.html"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "testeRepresentacional.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
